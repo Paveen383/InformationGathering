@@ -1,4 +1,8 @@
-# InformationGathering
+## NAME: Paveen Kumaran SV
+## REG. NO.: 212224220071
+## DATE: 30/01/2026
+
+# Ex-02 InformationGathering
 Information Gathering Techiques
 
 # To perform information gathering techniques
@@ -20,76 +24,93 @@ Investigate on the various categories of tools as follows:
 ### Step 3:
 Open terminal/browser and try execute necessary commands/use url to perform information gathering
 
-## Pen Test Tools Categories:  
+## Architecture Diagram
+```
+                      +-------------------------+
+                      |     Attacker System     |
+                      |     (Kali Linux)        |
+                      +-----------+-------------+
+                                  |
+                                  | Terminal / Browser
+                                  | Executes Recon Tools
+                                  v
+      +------------------- Passive Recon --------------------+
+      |                                                     |
+      |  +----------------+     +------------------------+  |
+      |  |   WHOIS Query  | --> |    Domain Registrars    |  |
+      |  +----------------+     +------------------------+  |
+      |                                                     |
+      |  +----------------+     +------------------------+  |
+      |  |   DNS Enum     | --> |     Public DNS Servers  |  |
+      |  +----------------+     +------------------------+  |
+      |                                                     |
+      +-----------------------------------------------------+
 
-Following Categories of pen test tools are identified for information gathering:
+                                  |
+                                  v
 
-Footprinting is a part of the reconnaissance process which is used for gathering possible information about a target computer system or network.
-http://www.whois.com/whois website to get detailed information about a domain name information including its owner, its registrar, date of registration, expiry, name server, owner's contact information, etc.
+      +------------------ Active Recon ----------------------+
+      |                                                     |
+      |  +----------------+     +------------------------+  |
+      |  |   Nmap Scan    | --> |  Target Host/Network    |  |
+      |  +----------------+     +------------------------+  |
+      |                                                     |
+      |  +----------------+     +------------------------+  |
+      |  | WhatWeb, Wapp | --> |   Target Web Application |  |
+      |  +----------------+     +------------------------+  |
+      |                                                     |
+      |  +----------------+     +------------------------+  |
+      |  | theHarvester   | --> |     Search Engines      |  |
+      |  +----------------+     +------------------------+  |
+      +-----------------------------------------------------+
+
+                                  |
+                                  v
+                    +-----------------------------+
+                    |     Collected Information   |
+                    | - IPs, Subdomains           |
+                    | - Open Ports & Services     |
+                    | - Technology Stack          |
+                    | - Emails, Metadata          |
+                    +-----------------------------+
+```
 
 ## OUTPUT:
+### Whois
+
+<img width="1919" height="1033" alt="Screenshot 2025-08-30 151437" src="https://github.com/user-attachments/assets/14ec3bf5-99bb-4d62-b193-9ea1cbab948f" />
 
 
-## Finding IP address:
-ping command is available on Windows as well as on Linux OS. Following is the example to find out the IP address of facebook.com.
-##output
+### Finding Hosting Company :
+<img width="1919" height="1030" alt="Screenshot 2025-08-30 151457" src="https://github.com/user-attachments/assets/86db40e4-9d7b-4449-b497-12e72b9728ef" />
 
+### History of the website :
+<img width="1897" height="1031" alt="Screenshot 2025-08-30 151549" src="https://github.com/user-attachments/assets/0dfa6d15-8dcc-46b6-9d5d-d971704a13f5" />
 
+### ping command :
+<img width="747" height="310" alt="Screenshot 2025-08-30 153349" src="https://github.com/user-attachments/assets/8f85009b-54f0-4731-a6a0-f00d794be079" />
 
-## Finding Hosting Company
-get further detail by using ip2location.com website.
-##output
+### whois :
+<img width="959" height="1099" alt="Screenshot 2025-08-30 152005" src="https://github.com/user-attachments/assets/530cf653-1ee1-4998-974f-5ce3d3ffcf2a" />
 
+### netcat :
+<img width="674" height="1061" alt="Screenshot 2025-08-30 152106" src="https://github.com/user-attachments/assets/d21fb871-282f-43d7-a342-677712026c65" />
 
+### nmap :
+<img width="1017" height="605" alt="Screenshot 2025-08-30 152508" src="https://github.com/user-attachments/assets/9d757615-33a0-4332-abf8-a284f348b5c2" />
 
-## History of the website:
-## output
-https://web.archive.org/
+### whatweb :
+<img width="1910" height="181" alt="Screenshot 2025-08-30 152611" src="https://github.com/user-attachments/assets/5be3fc95-f4fe-48b2-9bcd-e16acb7cb8f0" />
 
+### httprint :
+<img width="886" height="873" alt="Screenshot 2025-08-30 152856" src="https://github.com/user-attachments/assets/9ee66bbc-98c2-4ec1-bdb1-837f89299826" />
 
-# Webserver Fingerprinting:
+### TCP traceroute :
+<img width="930" height="405" alt="Screenshot 2025-08-30 152930" src="https://github.com/user-attachments/assets/c2c29e4c-694a-4f56-aff7-7c06e76664e4" />
 
-## Netcat:
-sudo nc example.com 80
-GET / HTTP/1.1
-Host: example.com
-
-
-
-## nmap:
-###output
-
-
-## Whatweb
-### output
-
-
-## httprint
-### output
-
-
-
-
-# Tracing the Location
-TCP Traceroute:
-sudo traceroute -T www.google.com
-## output
-
-
-## UDP Traceroute:
-sudo traceroute -U www.google.com
-## output
-
-
-
-## ICMP Traceroute:
-sudo traceroute  www.google.com
-## output
-
-
-
-
-
+### UDP traceroute :
+<img width="938" height="595" alt="Screenshot 2025-08-30 153006" src="https://github.com/user-attachments/assets/8f7bb5ee-4659-463f-ae65-f03842829a37" />
 
 ## RESULT:
-The information gathering techniques tools/procedure were  identified successfully
+
+The information gathering techniques tools/procedure were identified successfully.
